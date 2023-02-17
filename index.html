@@ -1,7 +1,9 @@
+<html>
+<body>
 <form action="action_page.php" style="border:1px solid #ccc">
   <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>Sign Up/Sign In</h1>
+    <p>Sign In To Become A Kilenco Member.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
@@ -25,3 +27,61 @@
     </div>
   </div>
 </form>
+    <SCRIPT language=JavaScript>
+
+<!-- http://www.spacegun.co.uk -->
+
+var message = "function disabled";
+
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+document.onmousedown = rtclickcheck;
+
+</SCRIPT>
+  
+<script language="JavaScript">
+      
+       window.onload = function () {
+           document.addEventListener("contextmenu", function (e) {
+               e.preventDefault();
+           }, false);
+           document.addEventListener("keydown", function (e) {
+               //document.onkeydown = function(e) {
+               // "I" key
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                   disabledEvent(e);
+               }
+               // "J" key
+               if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                   disabledEvent(e);
+               }
+               // "S" key + macOS
+               if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+               }
+               // "U" key
+               if (e.ctrlKey && e.keyCode == 85) {
+                   disabledEvent(e);
+               }
+               // "F12" key
+               if (event.keyCode == 123) {
+                   disabledEvent(e);
+               }
+           }, false);
+           function disabledEvent(e) {
+               if (e.stopPropagation) {
+                   e.stopPropagation();
+               } else if (window.event) {
+                   window.event.cancelBubble = true;
+               }
+               e.preventDefault();
+               return false;
+           }
+       }
+//edit: removed ";" from last "}" because of javascript error
+</script>
+
+</body>
+  </html>
